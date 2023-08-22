@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:-webkit-linear-gradient(right,rgb(105, 150, 187),#6eb494,#9e1565);
+    background-size: cover;
+    font-family: var(--font2);
+}
+:root{
+    --font1:'Roboto Condensed', sans-serif;
+    --font2:'Francois One', sans-serif;
+}
+
+.profile{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    top: 100%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    
+
+}
+.logo{
+    text-align: center;
+    text-transform: uppercase;
+    shape-outside: 50%;
+    font-family: var(--font1);
+    border-radius: 50%; 
+    height: 70px; 
+    width: 70px;
+    border-radius: 50%;
+   float: left;
+   margin-right: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.2em;
+  /* Use shape-outside property to create a circular shape */
+  shape-outside: circle(50%);
+  /* Ensures the text wraps around the circle */
+  box-shadow: 3px 4px 4px gray;
+}
+
+.logo::after{
+
+}
+.profile2{
+    display: block;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    
+}
+.profile::after{
+    content: '';
+    width: 250px;
+    height: 550px;
+    border-radius: 50%;
+    background-color: #9e1565;
+    
+}
+
+.services-banner{
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 30px;
+    column-gap: 40px;
+}
+
+.skills{
+    margin-top: 40px;
+}
+.skills-banner{
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 15px;
+    column-gap: 20px;
+}
+.nav{
+    width: 100%;
+    position: fixed;
+}
+
+@media only screen and (max-width: 768px){
+    .welcome{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+   } 
+    .welcome :nth-child(2){
+        margin-top: 30px;
+    }
+    .services-banner{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10px;
+    }
+    .skills-banner{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .welcome{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .welcome :nth-child(2){
+        grid-row: 1;
+    }
+    .welcome :nth-child(1)
+    {
+        grid-row: 2;
+        margin-left: 20px;
+    }
+    .profile{
+        width: 150px;
+        height: 150px;
+    }
+    .about{
+        display: flex;
+        flex-direction: column-reverse;
+}
+}
+@media only screen and (max-width: 500px){
+    .welcome{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+   }  
+    .profile{
+        width: 150px;
+        height: 150px;
+    }
+   
+    .services-banner{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 10px;
+    }
+    .skills-banner{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .profile{
+        grid-column: 1;
+        width: 150px;
+        height: 150px;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .about .profile2{
+        grid-column: 1;
+        width: 300px;
+        height: 300px;
+        margin-left: 20px;
+    }
+    .about :nth-child(1)
+    {
+        grid-row: 2 ;
+        margin-left: 20px;
+    }
+}
